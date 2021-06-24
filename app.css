@@ -1,0 +1,49 @@
+body {
+     background: url('34.jpg') no-repeat center;
+     background-size: cover; 
+}
+ table, td, th {
+     border: 0px solid black;
+     font-size:25px;
+ }
+ table {
+     border-collapse: collapse;
+     width: 75%;
+ }
+ th {
+     color: black;
+     font-size:30px;
+     height: 50px;
+ }
+ 
+ i {
+     text-align: left;
+ }
+
+.navbar-brand {
+    white-space:  break-spaces;
+}
+
+.main-title {
+    text-align: center;
+    background-color:rgba(128,128,128,0.8);
+}
+
+.main-menu-item {
+    font-size: 30px;
+    display: block;
+    width: 100%;
+    padding: .25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.main-menu-item:hover, .main-menu-item:focus {
+    color: #1e2125;
+    background-color: #e9ecef;
+}
