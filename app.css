@@ -31,7 +31,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
 }
+.card-img-top {
+height: 100%;
+width: 100%;
+}
+
 .main-title {
     /* text-align: center; */
     /* background-color:rgba(128,128,128,0.8); */
