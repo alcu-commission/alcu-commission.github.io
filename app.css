@@ -43,8 +43,7 @@ width: 100%;
     /* background-color:rgba(128,128,128,0.8); */
     font-family: Tahoma, 'Times New Roman', Times, serif;
     font-size: 40px;
-    background: url('ptc2.jpg') no-repeat right;
-    box-shadow: inset 1px 1px #fff;
+    background: url('ptc3.png') no-repeat right;
     min-width: 100%;
     height: 600px;
 
@@ -72,10 +71,7 @@ width: 100%;
 #school-name {
     margin-right: 90px;
 }
-.container-fluid {
-    margin-top: 10px;
-    background-color: #e9ecef;
-}
+
 h1 {
     font-size: 70px;
 }
@@ -83,6 +79,7 @@ h1 {
     margin-left: 10px;
 }
 .container-fluid {
+    margin-top: 10px;
     background-color: #e9ecef;
     padding-top: 50px;
 }
