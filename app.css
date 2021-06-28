@@ -86,3 +86,6 @@ h1 {
 .card {
     position: relative;
 }
+.footer-copyright  {
+    background-color: gray;
+}
