@@ -89,4 +89,9 @@ h1 {
 .footer-copyright  {
     background-color: gray;
 }
+.small{
+    font-size: 30px;
+    display: block;
+}
+
 
