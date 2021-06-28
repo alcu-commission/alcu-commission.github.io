@@ -40,13 +40,35 @@
       <div id="title-text">
         <h1>Statement of Vision and Mission, <br>Objectives of the institution</h1>
       </div>
+      <input type="file" name="file_upload" class="form-control" id="file">
+      <button class="btn btn-primary" onclick="sendRequest()">Save</button>
    </div>
    <br>
    
  </div>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
-      crossorigin="anonymous"></script>
-   <br><br>
+ <br><br>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+        const baseURL = 'http://alcucommission.great-site.net'
+        function sendRequest(event){
+            var formData = new FormData();
+            var inputFile = document.querySelector('#file');
+            formData.append("file_content", inputFile.files[0]);
+
+            axios.post(baseURL + '/upload.php', formData, {
+                headers: {
+                'Content-Type': "multipart/form-data"
+                }
+            })
+            .then(response => {
+                console.log(response)
+                alert(response.data); 
+            })
+            .catch(e => console.log("e", e))
+        }
+      </script>
    <body>
 </html>

@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "admin";
-$password = "lloydpogi23";
-$database_name = 'todo';
+$servername = "sql207.epizy.com";
+$username = "epiz_28994832";
+$password = "3fkkLGiOwpu";
+$database_name = 'epiz_28994832_alcu';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database_name);
