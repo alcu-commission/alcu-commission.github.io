@@ -83,17 +83,4 @@ h1 {
     background-color: #e9ecef;
     padding-top: 50px;
 }
-table, th, td {
-    border: 3px solid black;
-    
-  }
-  
-  table {
-      
-    width: 50%;
-    
-  }
-  .td{
-      width: 25%;
-  }
   
