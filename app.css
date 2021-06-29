@@ -89,5 +89,6 @@ table, th, td {
   }
   
   table {
+      align: center;
     width: 25%;
   }
