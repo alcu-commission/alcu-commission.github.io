@@ -91,4 +91,8 @@ table, th, td {
   table {
       
     width: 50%;
+    
+  }
+  .td{
+      width: 25%;
   }
