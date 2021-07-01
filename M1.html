@@ -42,7 +42,11 @@
       </div>
       <input type="file" name="file_upload" class="form-control" id="file">
        <button class="btn btn-primary" onclick="sendRequest()">Save</button>
-   
+      <ul id="file-list">
+        <li>
+          <a href=""></a>
+        </li>
+      </ul>
    <br>
    
  </div>
@@ -59,7 +63,7 @@
             var inputFile = document.querySelector('#file');
             formData.append("file_content", inputFile.files[0]);
 
-            axios.post(baseURL + '/upload.php', formData, {
+            axios.post(baseURL + '/api/upload.php', formData, {
                 headers: {
                 'Content-Type': "multipart/form-data"
                 }
@@ -67,9 +71,39 @@
             .then(response => {
                 console.log(response)
                 alert(response.data); 
+                getFileList()
             })
             .catch(e => console.log("e", e))
         }
+        function displayFileList(data){
+          const ulElement = document.getElementById('file-list')
+          ulElement.innerHTML = ''
+          for (let index = 0; index < data.length; index++) {
+            const file = data[index];
+            const liElement = document.createElement('li')
+            const anchorElement = document.createElement('a')
+
+            anchorElement.setAttribute("href", `${baseURL}/api/get-file.php?id=${file.id}`)
+            anchorElement.innerHTML = file.fname;
+
+            liElement.appendChild(anchorElement)
+            console.log(liElement)
+
+            ulElement.appendChild(liElement)
+          }
+        }
+        function getFileList(){
+          axios.get(baseURL + '/api/get-file-list.php')
+          .then(response => {
+            console.log(response.data)
+            displayFileList(response.data)
+          })
+          .catch(e => console.log("e", e))
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          getFileList()
+        })
       </script>
    <body>
 </html>
